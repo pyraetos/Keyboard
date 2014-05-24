@@ -14,7 +14,7 @@ public class Keyboard extends JApplet implements KeyListener{
 	private JLabel l;
 	
 	public Keyboard(){
-		Sounds.fromURL("file:///C:/Users/Pyraetos/Documents/workspace/ProjectDurian/sounds");
+		Sounds.fromPyraetosNet();
 		this.addKeyListener(this);
 		this.setFocusable(true);
 		l = new JLabel();
