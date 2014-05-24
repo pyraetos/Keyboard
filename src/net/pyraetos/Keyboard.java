@@ -19,6 +19,7 @@ public class Keyboard extends JApplet implements KeyListener{
 		this.setFocusable(true);
 		l = new JLabel();
 		l.setFont(new Font("Courier New", Font.PLAIN, 32));
+		l("Ready");
 		this.add(l);
 	}
 
