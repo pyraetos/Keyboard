@@ -6,26 +6,31 @@ import java.awt.event.KeyListener;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.swing.JApplet;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import net.pyraetos.util.Sounds;
 
-public class Keyboard extends JApplet implements KeyListener{
+public class Keyboard extends JFrame implements KeyListener{
 	
 	private JLabel l;
 	private Set<Integer> keys;
+	
+	public static void main(String[] args){
+		new Keyboard();
+	}
 	
 	public Keyboard(){
 		Sounds.fromPyraetosNet();
 		//Sounds.fromURL("file:///C:/Users/Pyraetos/Documents/workspace/sounds");
 		keys = new HashSet<Integer>();
 		this.addKeyListener(this);
-		this.setFocusable(true);
 		l = new JLabel();
 		l.setFont(new Font("Courier New", Font.PLAIN, 32));
 		l("Ready");
 		this.add(l);
+		this.setBounds(200, 200, 200, 200);
+		this.setVisible(true);
 	}
 	
 	public void l(String s){
